@@ -68,8 +68,6 @@ class JobTemplateModule(BaseAnsibleTowerModule):
 
     def getsubjectresource(self):
         return self.client.list('job_templates', params={
-            'inventory': self.params['inventory_id'],
-            'project': self.params['project_id'],
             'name': self.params['name']
         })
 
