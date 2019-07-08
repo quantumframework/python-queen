@@ -23,7 +23,7 @@ class JobTemplateModule(BaseAnsibleTowerModule):
         'tags': {'type': 'str', 'required': False, 'default': ''},
         'skip': {'type': 'str', 'required': False, 'default': ''},
         'force_handlers': {'type': 'bool', 'required': False, 'default': False},
-        'timeout': {'type': 'int', 'required': False, 'default': 120},
+        'timeout': {'type': 'int', 'required': False, 'default': 0},
         'use_fact_cache': {'type': 'bool', 'required': False, 'default': False},
         'show_diff': {'type': 'bool', 'required': False, 'default': False},
         'concurrent': {'type': 'bool', 'required': False, 'default': False},
