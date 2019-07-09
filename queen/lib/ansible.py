@@ -16,6 +16,7 @@ class AnsibleModule:
         )
         self.changed = False
         self.setupmodule(*args, **kwargs)
+        self.resource = None
 
     def getparameters(self):
         """Return the parameters for the Ansible module."""
