@@ -3,3 +3,4 @@ from .inventoryhost import InventoryHostModule
 from .jobtemplate import JobTemplateModule
 from .jobtemplatecredential import JobTemplateCredentialModule
 from .schema import SchemaModule
+from .team import TeamModule
