@@ -1,3 +1,5 @@
+from .credentialtype import CredentialTypeModule
+from .credential import CredentialModule
 from .inventorygroup import InventoryGroupModule
 from .inventoryhost import InventoryHostModule
 from .jobtemplate import JobTemplateModule
