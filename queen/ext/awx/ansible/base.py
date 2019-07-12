@@ -7,6 +7,12 @@ from ..client import AnsibleTowerClient
 class BaseAnsibleTowerModule(AnsibleModule):
     can_update = True
 
+    def facts_only(self):
+        """Return a boolean indicating if only the facts must
+        be returned. Use for resource lookups.
+        """
+        return self.params.get('facts')
+
     def setupmodule(self, *args, **kwargs):
         self.client = AnsibleTowerClient\
             .fromansibleparams(self.module.params)
@@ -64,6 +70,14 @@ class BaseAnsibleTowerModule(AnsibleModule):
 
     def run(self):
         query = self.getsubjectresource()
+        if not query and self.facts_only():
+            self.fail("Resource does not exist.")
+            return
+
+        if self.facts_only():
+            assert len(query) == 1
+            self.exit(resource=query[0])
+
         if not query and not self.isremoved():
             self.exit(resource=self.create())
 
