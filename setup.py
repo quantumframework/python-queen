@@ -11,7 +11,7 @@ REQUIREMENTS = [
 
 setup(
     name='quantum-queen',
-    version='1.0.4',
+    version='1.0.5',
     project_name='Quantum Queen',
     author='Cochise Ruhulessin',
     author_email='cochise.ruhulessin@wizardsofindustry.com',
