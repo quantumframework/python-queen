@@ -11,7 +11,8 @@ class BaseAnsibleTowerModule(AnsibleModule):
         """Return a boolean indicating if only the facts must
         be returned. Use for resource lookups.
         """
-        return self.params.get('facts')
+        return self.params.get('facts')\
+            or self.params.get('state') == 'facts'
 
     def setupmodule(self, *args, **kwargs):
         self.client = AnsibleTowerClient\

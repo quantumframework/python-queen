@@ -9,10 +9,10 @@ class CredentialTypeModule(BaseAnsibleTowerModule):
         'validate_certs': {'type': 'bool', 'required': False, 'default': False},
         'state': {'type': 'str', 'required': False, 'default': 'present'},
         'name': {'type': 'str', 'required': True},
-        'description': {'type': 'str', 'required': True},
+        'description': {'type': 'str', 'required': False},
         'kind': {'type': 'str', 'required': False, 'default': 'cloud'},
-        'inputs': {'type': 'dict', 'required': True},
-        'injectors': {'type': 'dict', 'required': True},
+        'inputs': {'type': 'dict', 'required': False},
+        'injectors': {'type': 'dict', 'required': False},
     }
 
     def getsubjectresource(self):
