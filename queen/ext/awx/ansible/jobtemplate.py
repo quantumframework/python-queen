@@ -64,15 +64,15 @@ class JobTemplateModule(BaseAnsibleTowerModule):
             'allow_simultaneous': self.params['concurrent'],
             'custom_virtualenv': None,
             'job_slice_count': self.params['job_slice_count'],
-            'ask_diff_mode_on_launch': False,
-            'ask_variables_on_launch': False,
-            'ask_limit_on_launch': False,
-            'ask_tags_on_launch': False,
-            'ask_skip_tags_on_launch': False,
-            'ask_job_type_on_launch': False,
-            'ask_verbosity_on_launch': False,
-            'ask_inventory_on_launch': False,
-            'ask_credential_on_launch': False
+            'ask_diff_mode_on_launch': self.params['ask_diff_mode_on_launch'],
+            'ask_variables_on_launch': self.params['ask_variables_on_launch'],
+            'ask_limit_on_launch': self.params['ask_limit_on_launch'],
+            'ask_tags_on_launch': self.params['ask_tags_on_launch'],
+            'ask_skip_tags_on_launch': self.params['ask_skip_tags_on_launch'],
+            'ask_job_type_on_launch': self.params['ask_job_type_on_launch'],
+            'ask_verbosity_on_launch': self.params['ask_verbosity_on_launch'],
+            'ask_inventory_on_launch': self.params['ask_inventory_on_launch'],
+            'ask_credential_on_launch': self.params['ask_credential_on_launch']
         }
 
     def getsubjectresource(self):
