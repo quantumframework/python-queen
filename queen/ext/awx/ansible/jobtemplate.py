@@ -28,6 +28,15 @@ class JobTemplateModule(BaseAnsibleTowerModule):
         'show_diff': {'type': 'bool', 'required': False, 'default': False},
         'concurrent': {'type': 'bool', 'required': False, 'default': False},
         'job_slice_count': {'type': 'int', 'required': False, 'default': 1},
+        'ask_diff_mode_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_variables_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_limit_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_tags_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_skip_tags_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_job_type_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_verbosity_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_inventory_on_launch': {'type': 'bool', 'required': False, 'default': False},
+        'ask_credential_on_launch': {'type': 'bool', 'required': False, 'default': False},
     }
 
     def dtofromparams(self):
