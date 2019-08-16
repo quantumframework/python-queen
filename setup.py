@@ -4,14 +4,14 @@ from setuptools import setup
 
 
 REQUIREMENTS = [
-    'ansible>=2.8.1',
+    'ansible>=2.8',
     'requests>=2.22.0'
 ]
 
 
 setup(
     name='quantum-queen',
-    version='1.0.7',
+    version='1.0.8',
     project_name='Quantum Queen',
     author='Cochise Ruhulessin',
     author_email='cochise.ruhulessin@wizardsofindustry.com',
